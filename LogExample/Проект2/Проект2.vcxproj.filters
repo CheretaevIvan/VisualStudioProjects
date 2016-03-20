@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Файлы исходного кода">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Заголовочные файлы">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Файлы ресурсов">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="log4cpp">
+      <UniqueIdentifier>{c1c78053-db55-40d2-a4f1-da2981fbbb4b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="MyForm.cpp">
+      <Filter>Файлы исходного кода</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="MyForm.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Downloads\Загрузки\log4cpp\include\log4cpp\AbortAppender.hh">
+      <Filter>log4cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Downloads\Загрузки\log4cpp\include\log4cpp\Appender.hh">
+      <Filter>log4cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Downloads\Загрузки\log4cpp\include\log4cpp\AppendersFactory.hh">
+      <Filter>log4cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Downloads\Загрузки\log4cpp\include\log4cpp\AppenderSkeleton.hh">
+      <Filter>log4cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Downloads\Загрузки\log4cpp\include\log4cpp\BasicConfigurator.hh">
+      <Filter>log4cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Downloads\Загрузки\log4cpp\include\log4cpp\BasicLayout.hh">
+      <Filter>log4cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Downloads\Загрузки\log4cpp\include\log4cpp\BufferingAppender.hh">
+      <Filter>log4cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Downloads\Загрузки\log4cpp\include\log4cpp\Category.hh">
+      <Filter>log4cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Downloads\Загрузки\log4cpp\include\log4cpp\CategoryStream.hh">
+      <Filter>log4cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Downloads\Загрузки\log4cpp\include\log4cpp\Configurator.hh">
+      <Filter>log4cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Downloads\Загрузки\log4cpp\include\log4cpp\DailyRollingFileAppender.hh">
+      <Filter>log4cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Downloads\Загрузки\log4cpp\include\log4cpp\Export.hh">
+      <Filter>log4cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Downloads\Загрузки\log4cpp\include\log4cpp\FactoryParams.hh">
+      <Filter>log4cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Downloads\Загрузки\log4cpp\include\log4cpp\FileAppender.hh">
+      <Filter>log4cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Downloads\Загрузки\log4cpp\include\log4cpp\Filter.hh">
+      <Filter>log4cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Downloads\Загрузки\log4cpp\include\log4cpp\FixedContextCategory.hh">
+      <Filter>log4cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Downloads\Загрузки\log4cpp\include\log4cpp\HierarchyMaintainer.hh">
+      <Filter>log4cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Downloads\Загрузки\log4cpp\include\log4cpp\IdsaAppender.hh">
+      <Filter>log4cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Downloads\Загрузки\log4cpp\include\log4cpp\Layout.hh">
+      <Filter>log4cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Downloads\Загрузки\log4cpp\include\log4cpp\LayoutAppender.hh">
+      <Filter>log4cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Downloads\Загрузки\log4cpp\include\log4cpp\LayoutsFactory.hh">
+      <Filter>log4cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Downloads\Загрузки\log4cpp\include\log4cpp\LevelEvaluator.hh">
+      <Filter>log4cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Downloads\Загрузки\log4cpp\include\log4cpp\LoggingEvent.hh">
+      <Filter>log4cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Downloads\Загрузки\log4cpp\include\log4cpp\Manipulator.hh">
+      <Filter>log4cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Downloads\Загрузки\log4cpp\include\log4cpp\NDC.hh">
+      <Filter>log4cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Downloads\Загрузки\log4cpp\include\log4cpp\NTEventLogAppender.hh">
+      <Filter>log4cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Downloads\Загрузки\log4cpp\include\log4cpp\OstreamAppender.hh">
+      <Filter>log4cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Downloads\Загрузки\log4cpp\include\log4cpp\PassThroughLayout.hh">
+      <Filter>log4cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Downloads\Загрузки\log4cpp\include\log4cpp\PatternLayout.hh">
+      <Filter>log4cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Downloads\Загрузки\log4cpp\include\log4cpp\Portability.hh">
+      <Filter>log4cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Downloads\Загрузки\log4cpp\include\log4cpp\Priority.hh">
+      <Filter>log4cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Downloads\Загрузки\log4cpp\include\log4cpp\PropertyConfigurator.hh">
+      <Filter>log4cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Downloads\Загрузки\log4cpp\include\log4cpp\RemoteSyslogAppender.hh">
+      <Filter>log4cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Downloads\Загрузки\log4cpp\include\log4cpp\RollingFileAppender.hh">
+      <Filter>log4cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Downloads\Загрузки\log4cpp\include\log4cpp\SimpleConfigurator.hh">
+      <Filter>log4cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Downloads\Загрузки\log4cpp\include\log4cpp\SimpleLayout.hh">
+      <Filter>log4cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Downloads\Загрузки\log4cpp\include\log4cpp\SmtpAppender.hh">
+      <Filter>log4cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Downloads\Загрузки\log4cpp\include\log4cpp\StringQueueAppender.hh">
+      <Filter>log4cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Downloads\Загрузки\log4cpp\include\log4cpp\SyslogAppender.hh">
+      <Filter>log4cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Downloads\Загрузки\log4cpp\include\log4cpp\TimeStamp.hh">
+      <Filter>log4cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Downloads\Загрузки\log4cpp\include\log4cpp\TriggeringEventEvaluator.hh">
+      <Filter>log4cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Downloads\Загрузки\log4cpp\include\log4cpp\TriggeringEventEvaluatorFactory.hh">
+      <Filter>log4cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Downloads\Загрузки\log4cpp\include\log4cpp\Win32DebugAppender.hh">
+      <Filter>log4cpp</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="log4cpp.properties" />
+  </ItemGroup>
+</Project>

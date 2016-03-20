@@ -1,0 +1,21 @@
+enable
+conf t
+hostname 
+no ip domain-lookup
+enable secret class
+service password-encryption
+banner motd #Laboratory work of 
+student Cheretaev Ivan group RI320207 
+Unauthorized access to the device  is prohibited#
+line con 0
+password cisco
+login
+logging synchronous
+line vty 0 15
+password cisco
+login
+logging synchronous
+
+
+
+end

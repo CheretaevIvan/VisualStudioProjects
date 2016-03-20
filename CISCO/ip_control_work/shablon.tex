@@ -1,0 +1,383 @@
+\documentclass[a4paper]{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\usepackage[cp1251]{inputenc}
+\usepackage[russian]{babel}
+
+
+\usepackage{report}
+
+\begin{document}
+
+	
+	
+	\begin{center}
+		\textbf{Контрольная работа по курсу
+			«Сети ЭВМ и телекоммуникации}
+	\end{center}
+	Cтудент \theFamily~\theName~Гр. 3\theGroup
+	
+	\textbf{Вариант \theN}
+	
+	
+	\textbf{Часть I. Планирование адресного пространства IPv6}
+	
+	\textbf{Задание 1.1:}: Представить сокращенную запись адреса сети IPv6, который сформирован следующим образом:
+\begin{enumerate}
+	\item Префикс глобальной маршрутизации установлен в соответствии с рекомендациями  http://tools.ietf.org/html/rfc3849
+	\item Идентификатор подсети установлен в соответствии с номером Вашей учебной группы, который интерпретируется как десятичное число.  
+	\item Старшие 5 байтов  идентификатора интерфейса установлены кодами ASCII (http://ascii.org.ru/) первых пяти букв Вашего имени (в латинице).
+	\item Остальные позиции адреса установлены нулевыми значениями.
+\end{enumerate}
+	\textbf{Решение 1.1 (макс. 20 баллов):}
+	
+	\begin{tabular}{|l|l|}
+		\hline Сеть IPv6  &  \thenetIPvsix \\ 
+		\hline 
+	\end{tabular} 
+	
+	
+	\textbf{Задание 1.2:} разбить сеть из п.1.1 на \theYzero ~одинаковых по размеру подсетей МАКСИМАЛЬНОЙ ДЛИНЫ и указать префиксы первой и последней подсетей.
+	
+	\textbf{Решение 1.2 (макс. 20 баллов):}
+	
+		
+	
+	\begin{tabular}{|l|l|}
+		\hline Префикс $ N_{\text{СЃС‚}} $ & \prefixNstartOneTwo \\ 
+		\hline Префикс $ N_{\text{С„РёРЅ}} $ & \prefixNfinishOneTwo \\ 
+		\hline 
+	\end{tabular} 
+	
+	\textbf{Часть II. Планирование адресного пространства IPv4}
+	
+	\textbf{$ X0= \text{целая часть}~(N*16)/256 + 10 = \text{целая часть}~(\theN*16)/256 + 10 = \theXzero$}
+	
+	\textbf{$ X1=\text{остаток от деления}~(N*16)/256 = \text{остаток от деления}~(\theN*16)/256 = \theXone$}
+	
+	\textbf{Дано:  }
+		Сеть \theXzero.\theXone.0.0/12
+	
+	\textbf{Задание 2.1.1:} разбить сеть на \theYone ~подсетей, указать для первых 5 подсетей:
+\begin{itemize}
+	\item 	адрес подсети;
+	\item адрес первого узла;
+	\item	адрес последнего узла;
+	\item широковещательный адрес для данной подсети (directed broadcast).
+\end{itemize}
+	
+	\textbf{Решение 2.1.1(макс. 15 баллов):}
+\begin{enumerate}
+	\item 	Представляем адрес сети и маску подсети в двоичном виде::
+	
+	\begin{tabular}{ccccc}
+		 & \theXzero & \theXone & 0 & 0 \\ 
+		\textbf{Адрес сети} & \theXzeroBinary & \theXoneBinary & 00000000 & 00000000 \\ 
+		\textbf{Маска} & 11111111 & 11110000 & 00000000 & 00000000 \\ 
+		 & 255 & 240 & 0 & 0 \\ 
+	\end{tabular} 
+	
+	\item Чтобы разбить адрес сети на нужное количество подсетей, необходимо заимствовать \theamountbitstwooneone ~бит из \theoctettwooneone -го октета.
+		
+	\item Итого, получается, что сеть \theXzero.\theXone.0.0/12 мы разбили на \theamountnetstwooneone ~подсети, в каждой из которых по \theamounthoststwooneone ~узлов, указываем первые 5 подсетей:
+	
+	\begin{tabular}{ccccc}
+		& \theXzero & \theXone & 0 & 0 \\ 
+		\textbf{Адрес сети дв.с} & \theXzeroBinary & \theXoneBinary & 00000000 & 00000000 \\ 
+		\textbf{Маска дв.с} & \themaskonebinarytwooneone & \themasktwobinarytwooneone & \themaskthreebinarytwooneone & \themaskfourbinarytwooneone \\ 
+		& \themaskonetwooneone & \themasktwotwooneone & \themaskthreetwooneone & \themaskfourtwooneone \\ 
+	\end{tabular} 
+	
+	\begin{tabular}{|l|l|}
+		\hline \rule[-2ex]{0pt}{5.5ex} Адрес сети $ N_1 $/ Префикс $ N_1 $ & \thenetoneone \\ 
+		\hline \rule[-2ex]{0pt}{5.5ex} Адрес первого узла $ N_1 $ & \thefirsthostoneone \\ 
+		\hline \rule[-2ex]{0pt}{5.5ex} Адрес последнего узла $  N_1 $ & \thelasthostoneone \\ 
+		\hline \rule[-2ex]{0pt}{5.5ex} Широковещательный адрес $ N_1 $ & \thebroadcastoneone \\ 
+		\hline 
+	\end{tabular} 
+			
+	\begin{tabular}{|l|l|}
+		\hline \rule[-2ex]{0pt}{5.5ex} Адрес сети $ N_2 $/ Префикс $ N_2 $ & \thenetonetwo \\ 
+		\hline \rule[-2ex]{0pt}{5.5ex} Адрес первого узла $ N_2 $ & \thefirsthostonetwo \\ 
+		\hline \rule[-2ex]{0pt}{5.5ex} Адрес последнего узла $  N_2 $ & \thelasthostonetwo \\ 
+		\hline \rule[-2ex]{0pt}{5.5ex} Широковещательный адрес $ N_2 $ & \thebroadcastonetwo \\ 
+		\hline 
+	\end{tabular} 
+	
+	\begin{tabular}{|l|l|}
+		\hline \rule[-2ex]{0pt}{5.5ex} Адрес сети $ N_3 $/ Префикс $ N_3 $ & \thenetonethree \\ 
+		\hline \rule[-2ex]{0pt}{5.5ex} Адрес первого узла $ N_3 $ & \thefirsthostonethree \\ 
+		\hline \rule[-2ex]{0pt}{5.5ex} Адрес последнего узла $  N_3 $ & \thelasthostonethree \\ 
+		\hline \rule[-2ex]{0pt}{5.5ex} Широковещательный адрес $ N_3 $ &  \thebroadcastonethree \\ 
+		\hline 
+	\end{tabular} 
+	
+	\begin{tabular}{|l|l|}
+		\hline \rule[-2ex]{0pt}{5.5ex} Адрес сети $ N_4 $/ Префикс $ N_4 $ & \thenetonefour \\ 
+		\hline \rule[-2ex]{0pt}{5.5ex} Адрес первого узла $ N_4 $ & \thefirsthostonefour \\ 
+		\hline \rule[-2ex]{0pt}{5.5ex} Адрес последнего узла $  N_4 $ & \thelasthostonefour \\ 
+		\hline \rule[-2ex]{0pt}{5.5ex} Широковещательный адрес $ N_4 $ & \thebroadcastonefour \\ 
+		\hline 
+	\end{tabular} 
+	
+	\begin{tabular}{|l|l|}
+		\hline \rule[-2ex]{0pt}{5.5ex} Адрес сети $ N_5 $/ Префикс $ N_5 $ & \thenetonefive \\ 
+		\hline \rule[-2ex]{0pt}{5.5ex} Адрес первого узла $ N_5 $ & \thefirsthostonefive \\ 
+		\hline \rule[-2ex]{0pt}{5.5ex} Адрес последнего узла $  N_5 $ & \thelasthostonefive \\ 
+		\hline \rule[-2ex]{0pt}{5.5ex} Широковещательный адрес $ N_5 $ & \thebroadcastonefive \\ 
+		\hline 
+	\end{tabular} 
+\end{enumerate}
+	
+	
+	\textbf{Дано: }
+	 Сеть \theXzero.\theXone.0.0/12
+	 
+	\textbf{Задание 2.1.2:} разбить сеть на \theYtwo ~подсетей, указать для первой и последней  подсетей:
+	\begin{itemize}
+		\item 	адрес подсети;
+		\item адрес первого узла;
+		\item	адрес последнего узла;
+		\item широковещательный адрес для данной подсети (directed broadcast).
+	\end{itemize}
+	
+	
+	\textbf{Решение 2.1.2(макс. 15 баллов):}
+	\begin{enumerate}
+		\item Представляем адрес сети и маску подсети в двоичном виде::
+	
+	\begin{tabular}{ccccc}
+		& \theXzero & \theXone & 0 & 0 \\ 
+		\textbf{Адрес сети} & \theXzeroBinary & \theXoneBinary & 00000000 & 00000000 \\ 
+		\textbf{Маска} & 11111111 & 11110000 & 00000000 & 00000000 \\ 
+		& 255 & 240 & 0 & 0 \\ 
+	\end{tabular} 
+	
+	\item Чтобы разбить данную сеть на  (\theYtwo  $ \leqslant 2^{\theamountbitssummarytwoonetwo} = \theamountnetstwoonetwo$) подсетей необходимо заимствовать \theamountbitstwoonetwo ~бит из \theoctettwoonetwo-го октета (получается, что сеть можно разбить на \theamountnetstwoonetwo ~подсетей: $ 2^{\theamountbitssummarytwoonetwo} = \theamountnetstwoonetwo$; оставшиеся \theamountbitshoststwoonetwo ~бит идут под узлы: $ 2^{\theamountbitshoststwoonetwo}-2 = \theamounthoststwoonetwo $ в каждой подсети).
+
+	\begin{tabular}{ccccc}
+		& \theXzero & \theXone & 0 & 0 \\ 
+		\textbf{Адрес сети дв.с} & \theXzeroBinary & \theXoneBinary & 00000000 & 00000000 \\ 
+		\textbf{Маска дв.с} & \themaskonebinarytwoonetwo & \themasktwobinarytwoonetwo & \themaskthreebinarytwoonetwo & \themaskfourbinarytwoonetwo \\ 
+		& \themaskonetwoonetwo & \themasktwotwoonetwo & \themaskthreetwoonetwo & \themaskfourtwoonetwo \\ 
+	\end{tabular} 
+	
+	\item Указываем первую и последнюю подсети:
+	
+		\begin{tabular}{|l|l|}
+			\hline \rule[-2ex]{0pt}{5.5ex} Адрес сети $ N_1 $/ Префикс $ N_1 $ & \thenetfirstone \\ 
+			\hline \rule[-2ex]{0pt}{5.5ex} Адрес первого узла $ N_1 $ & \thefirsthostfirstone \\ 
+			\hline \rule[-2ex]{0pt}{5.5ex} Адрес последнего узла $  N_1 $ & \thelasthostfirstone \\ 
+			\hline \rule[-2ex]{0pt}{5.5ex} Широковещательный адрес $ N_1 $ & \thebroadcastfirstone \\ 
+			\hline 
+		\end{tabular} 	
+		
+		\begin{tabular}{|l|l|}
+			\hline \rule[-2ex]{0pt}{5.5ex} Адрес сети $ N_2 $/ Префикс $ N_2 $ & \thenetendone \\ 
+			\hline \rule[-2ex]{0pt}{5.5ex} Адрес первого узла $ N_2 $ & \thefirsthostendone \\ 
+			\hline \rule[-2ex]{0pt}{5.5ex} Адрес последнего узла $  N_2 $ & \thelasthostendone \\ 
+			\hline \rule[-2ex]{0pt}{5.5ex} Широковещательный адрес $ N_2 $ & \thebroadcastendone \\ 
+			\hline 
+		\end{tabular} 
+	\end{enumerate}	
+	
+	
+	\textbf{Задание 2.2.1:} разбить сеть на подсети, чтобы в каждой было по \theZone ~узла (с учетом адресов сети и directed broadcast),  указать для ПОСЛЕДНИХ 5 подсетей:
+	\begin{itemize}
+		\item 	адрес подсети;
+		\item адрес первого узла;
+		\item	адрес последнего узла;
+		\item широковещательный адрес для данной подсети (directed broadcast).
+	\end{itemize}
+	
+
+
+	\textbf{Решение 2.2.1(макс. 15 баллов):}
+	\begin{enumerate}
+		\item Представляем адрес сети и маску подсети в двоичном виде::
+	
+	\begin{tabular}{ccccc}
+		& \theXzero & \theXone & 0 & 0 \\ 
+		\textbf{Адрес сети} & \theXzeroBinary & \theXoneBinary & 00000000 & 00000000 \\ 
+		\textbf{Маска} & 11111111 & 11110000 & 00000000 & 00000000 \\ 
+		& 255 & 240 & 0 & 0 \\ 
+	\end{tabular} 
+	
+	\item Количество узлов в сети зависит от числа бит в узловой части IP-адреса и вычисляется по формуле  $ 2^{n}  -2 $, где $ n $ ~- кол-во <<узловых>> бит. В нашем случае $ n=\theamountbitshoststwotwoone $, т.к. $ 2^{\theamountbitshoststwotwoone}  -2=\theamounthoststwotwoone $. Т.е. нужно выбрать такую маску, которря выделит ровно \theamountbitshoststwotwoone ~бит для адресов узлов. Таким образом, исходную сеть мы сможем разбить на $ 2^{\theamountbitstwotwoone} =\theamountnetstwotwoone $ подсетей по \theamounthoststwotwoone ~узла(ов) в каждой.
+
+	\begin{tabular}{ccccc}
+		& \theXzero & \theXone & 0 & 0 \\ 
+		\textbf{Адрес сети дв.с} & \theXzeroBinary & \theXoneBinary & 00000000 & 00000000 \\ 
+		\textbf{Маска дв.с} & \themaskonebinarytwotwoone & \themasktwobinarytwotwoone & \themaskthreebinarytwotwoone & \themaskfourbinarytwotwoone \\ 
+		& \themaskonetwotwoone & \themasktwotwotwoone & \themaskthreetwotwoone & \themaskfourtwotwoone \\ 
+	\end{tabular}
+	
+	\item Указываем последние 5 подсетей:
+	
+	\begin{tabular}{|l|l|}
+		\hline \rule[-2ex]{0pt}{5.5ex} Адрес сети $ N_1 $/ Префикс $ N_1 $ & \thenettwoone \\ 
+		\hline \rule[-2ex]{0pt}{5.5ex} Адрес первого узла $ N_1 $ & \thefirsthosttwoone \\ 
+		\hline \rule[-2ex]{0pt}{5.5ex} Адрес последнего узла $  N_1 $ & \thelasthosttwoone \\ 
+		\hline \rule[-2ex]{0pt}{5.5ex} Широковещательный адрес $ N_1 $ & \thebroadcasttwoone \\ 
+		\hline 
+	\end{tabular}
+	 		
+	\begin{tabular}{|l|l|}
+		\hline \rule[-2ex]{0pt}{5.5ex} Адрес сети $ N_2 $/ Префикс $ N_2 $ & \thenettwotwo \\ 
+		\hline \rule[-2ex]{0pt}{5.5ex} Адрес первого узла $ N_2 $ & \thefirsthosttwotwo \\ 
+		\hline \rule[-2ex]{0pt}{5.5ex} Адрес последнего узла $  N_2 $ & \thelasthosttwotwo \\ 
+		\hline \rule[-2ex]{0pt}{5.5ex} Широковещательный адрес $ N_2 $ & \thebroadcasttwotwo \\ 
+		\hline 
+	\end{tabular} 
+	
+	\begin{tabular}{|l|l|}
+		\hline \rule[-2ex]{0pt}{5.5ex} Адрес сети $ N_3 $/ Префикс $ N_3 $ & \thenettwothree \\ 
+		\hline \rule[-2ex]{0pt}{5.5ex} Адрес первого узла $ N_3 $ & \thefirsthosttwothree \\ 
+		\hline \rule[-2ex]{0pt}{5.5ex} Адрес последнего узла $  N_3 $ & \thelasthosttwothree \\ 
+		\hline \rule[-2ex]{0pt}{5.5ex} Широковещательный адрес $ N_3 $ & \thebroadcasttwothree \\ 
+		\hline 
+	\end{tabular} 
+	
+	\begin{tabular}{|l|l|}
+		\hline \rule[-2ex]{0pt}{5.5ex} Адрес сети $ N_4 $/ Префикс $ N_4 $ & \thenettwofour \\ 
+		\hline \rule[-2ex]{0pt}{5.5ex} Адрес первого узла $ N_4 $ & \thefirsthosttwofour \\ 
+		\hline \rule[-2ex]{0pt}{5.5ex} Адрес последнего узла $  N_4 $ & \thelasthosttwofour \\ 
+		\hline \rule[-2ex]{0pt}{5.5ex} Широковещательный адрес $ N_4 $ & \thebroadcasttwofour \\ 
+		\hline 
+	\end{tabular} 
+	
+	\begin{tabular}{|l|l|}
+		\hline \rule[-2ex]{0pt}{5.5ex} Адрес сети $ N_5 $/ Префикс $ N_5 $ & \thenettwofive \\ 
+		\hline \rule[-2ex]{0pt}{5.5ex} Адрес первого узла $ N_5 $ & \thefirsthosttwofive \\ 
+		\hline \rule[-2ex]{0pt}{5.5ex} Адрес последнего узла $  N_5 $ & \thelasthosttwofive \\ 
+		\hline \rule[-2ex]{0pt}{5.5ex} Широковещательный адрес $ N_5 $ & \thebroadcasttwofive \\ 
+		\hline 
+	\end{tabular} 
+	\end{enumerate}
+	
+	\textbf{Задание 2.2.2:} разбить сеть на подсети, чтобы в каждой было не менее \theZtwo
+	  ~АКТИВНЫХ узлов, указать для первой и последней  подсетей:
+	\begin{itemize}
+		\item 	адрес подсети;
+		\item адрес первого узла;
+		\item	адрес последнего узла;
+		\item широковещательный адрес для данной подсети (directed broadcast).
+	\end{itemize}
+
+
+	\textbf{Решение 2.2.2(макс. 15 баллов):}
+\begin{enumerate}
+	\item 	Представляем адрес сети и маску подсети в двоичном виде::
+
+	\begin{tabular}{ccccc}
+		& \theXzero & \theXone & 0 & 0 \\ 
+		\textbf{Адрес сети} & \theXzeroBinary & \theXoneBinary & 00000000 & 00000000 \\ 
+		\textbf{Маска} & 11111111 & 11110000 & 00000000 & 00000000 \\ 
+		& 255 & 240 & 0 & 0 \\ 
+	\end{tabular}
+
+	\item Количество узлов в сети зависит от числа бит в узловой части IP-адреса и вычисляется по формуле  $ 2^n - 2 $, где $ n $ - кол-во <<узловых>> бит. В нашем случае n= \theamountbitshoststwotwotwo, т.к. $ 2^{\theamountbitshoststwotwotwo}- 2= \theamounthoststwotwotwo~\geqslant\theZtwo$. 
+	
+	\begin{tabular}{ccccc}
+		& \theXzero & \theXone & 0 & 0 \\ 
+		\textbf{Адрес сети дв.с} & \theXzeroBinary & \theXoneBinary & 00000000 & 00000000 \\ 
+		\textbf{Маска дв.с} & \themaskonebinarytwotwotwo & \themasktwobinarytwotwotwo & \themaskthreebinarytwotwotwo & \themaskfourbinarytwotwotwo \\ 
+		& \themaskonetwotwotwo & \themasktwotwotwotwo & \themaskthreetwotwotwo & \themaskfourtwotwotwo \\ 
+	\end{tabular}
+	
+	\item Указываем первую и последнюю подсети
+	
+		\begin{tabular}{|l|l|}
+			\hline \rule[-2ex]{0pt}{5.5ex} Адрес сети $ N_1 $/ Префикс $ N_1 $ & \thenetfirsttwo \\ 
+			\hline \rule[-2ex]{0pt}{5.5ex} Адрес первого узла $ N_1 $ & \thefirsthostfirsttwo \\ 
+			\hline \rule[-2ex]{0pt}{5.5ex} Адрес последнего узла $  N_1 $ & \thelasthostfirsttwo \\ 
+			\hline \rule[-2ex]{0pt}{5.5ex} Широковещательный адрес $ N_1 $ & \thebroadcastfirsttwo \\ 
+			\hline 
+		\end{tabular} 	
+		
+		\begin{tabular}{|l|l|}
+			\hline \rule[-2ex]{0pt}{5.5ex} Адрес сети $ N_2 $/ Префикс $ N_2 $ & \thenetendtwo \\ 
+			\hline \rule[-2ex]{0pt}{5.5ex} Адрес первого узла $ N_2 $ & \thefirsthostendtwo \\ 
+			\hline \rule[-2ex]{0pt}{5.5ex} Адрес последнего узла $  N_2 $ & \thelasthostendtwo \\ 
+			\hline \rule[-2ex]{0pt}{5.5ex} Широковещательный адрес $ N_2 $ & \thebroadcastendtwo \\ 
+			\hline 
+		\end{tabular} 
+\end{enumerate}
+	
+	
+	\textbf{Задание 2.2.3: }разбить сеть на подсети, чтобы в каждой было не менее \theZthree ~АКТИВНЫХ узлов,  указать для ПОСЛЕДНИХ 5 подсетей:
+
+	\begin{itemize}
+		\item 	адрес подсети;
+		\item адрес первого узла;
+		\item	адрес последнего узла;
+		\item широковещательный адрес для данной подсети (directed broadcast).
+	\end{itemize}
+
+	\textbf{Решение 2.2.3(макс. 15 баллов):}
+	
+	\begin{enumerate}
+		\item Представляем адрес сети и маску подсети в двоичном виде::
+
+	\begin{tabular}{ccccc}
+		& \theXzero & \theXone & 0 & 0 \\ 
+		\textbf{Адрес сети} & \theXzeroBinary & \theXoneBinary & 00000000 & 00000000 \\ 
+		\textbf{Маска} & 11111111 & 11110000 & 00000000 & 00000000 \\ 
+		& 255 & 240 & 0 & 0 \\ 
+	\end{tabular}
+	
+	\item 	Количество узлов в сети зависит от числа бит в узловой части IP-адреса и вычисляется по формуле  $ 2^n {- 2} $, где n- кол-во «узловых» бит. В нашем случае n=\theamountbitshoststwotwothree , т.к. $ 2^{\theamountbitshoststwotwothree} - 2 = \theamounthoststwotwothree $. 
+	
+	\begin{tabular}{ccccc}
+		& \theXzero & \theXone & 0 & 0 \\ 
+		\textbf{Адрес сети дв.с} & \theXzeroBinary & \theXoneBinary & 00000000 & 00000000 \\ 
+		\textbf{Маска дв.с} & \themaskonebinarytwotwothree & \themasktwobinarytwotwothree & \themaskthreebinarytwotwothree & \themaskfourbinarytwotwothree \\ 
+		& \themaskonetwotwothree & \themasktwotwotwothree & \themaskthreetwotwothree & \themaskfourtwotwothree \\ 
+	\end{tabular}
+	
+	\item Указываем последние 5 подсетей:
+	
+	\begin{tabular}{|l|l|}
+		\hline \rule[-2ex]{0pt}{5.5ex} Адрес сети $ N_1 $/ Префикс $ N_1 $ & \thenetthreeone \\ 
+		\hline \rule[-2ex]{0pt}{5.5ex} Адрес первого узла $ N_1 $ & \thefirsthostthreeone \\ 
+		\hline \rule[-2ex]{0pt}{5.5ex} Адрес последнего узла $  N_1 $ & \thelasthostthreeone \\ 
+		\hline \rule[-2ex]{0pt}{5.5ex} Широковещательный адрес $ N_1 $ & \thebroadcastthreeone \\ 
+		\hline 
+	\end{tabular} 
+			
+	\begin{tabular}{|l|l|}
+		\hline \rule[-2ex]{0pt}{5.5ex} Адрес сети $ N_2 $/ Префикс $ N_2 $ & \thenetthreetwo \\ 
+		\hline \rule[-2ex]{0pt}{5.5ex} Адрес первого узла $ N_2 $ & \thefirsthostthreetwo \\ 
+		\hline \rule[-2ex]{0pt}{5.5ex} Адрес последнего узла $  N_2 $ & \thelasthostthreetwo \\ 
+		\hline \rule[-2ex]{0pt}{5.5ex} Широковещательный адрес $ N_2 $ & \thebroadcastthreetwo \\ 
+		\hline 
+	\end{tabular} 
+	
+	\begin{tabular}{|l|l|}
+		\hline \rule[-2ex]{0pt}{5.5ex} Адрес сети $ N_3 $/ Префикс $ N_3 $ & \thenetthreethree \\ 
+		\hline \rule[-2ex]{0pt}{5.5ex} Адрес первого узла $ N_3 $ & \thefirsthostthreethree \\ 
+		\hline \rule[-2ex]{0pt}{5.5ex} Адрес последнего узла $  N_3 $ & \thelasthostthreethree \\ 
+		\hline \rule[-2ex]{0pt}{5.5ex} Широковещательный адрес $ N_3 $ & \thebroadcastthreethree \\ 
+		\hline 
+	\end{tabular} 
+	
+	\begin{tabular}{|l|l|}
+		\hline \rule[-2ex]{0pt}{5.5ex} Адрес сети $ N_4 $/ Префикс $ N_4 $ & \thenetthreefour \\ 
+		\hline \rule[-2ex]{0pt}{5.5ex} Адрес первого узла $ N_4 $ & \thefirsthostthreefour \\ 
+		\hline \rule[-2ex]{0pt}{5.5ex} Адрес последнего узла $  N_4 $ & \thelasthostthreefour \\ 
+		\hline \rule[-2ex]{0pt}{5.5ex} Широковещательный адрес $ N_4 $ & \thebroadcastthreefour \\ 
+		\hline 
+	\end{tabular} 
+	
+	\begin{tabular}{|l|l|}
+		\hline \rule[-2ex]{0pt}{5.5ex} Адрес сети $ N_5 $/ Префикс $ N_5 $ & \thenetthreefive \\ 
+		\hline \rule[-2ex]{0pt}{5.5ex} Адрес первого узла $ N_5 $ & \thefirsthostthreefive \\ 
+		\hline \rule[-2ex]{0pt}{5.5ex} Адрес последнего узла $  N_5 $ & \thelasthostthreefive \\ 
+		\hline \rule[-2ex]{0pt}{5.5ex} Широковещательный адрес $ N_5 $ & \thebroadcastthreefive \\ 
+		\hline 
+	\end{tabular} 
+	\end{enumerate}
+		
+\end{document}

@@ -1,0 +1,13 @@
+2015-11-29 16:12:02 [ERROR] root error
+2015-11-29 16:12:02 [INFO] root info
+2015-11-29 16:13:03 [ERROR] root error
+2015-11-29 16:13:03 [INFO] root info
+2015-11-29 16:13:15 [ERROR] root error
+2015-11-29 16:13:15 [INFO] root info
+2015-11-29 16:14:09 [ERROR] root error
+2015-11-29 16:14:09 [INFO] root info
+2015-11-29 16:15:03 [ERROR] root error
+2015-11-29 16:15:03 [INFO] root info
+2015-11-29 16:16:19 [ERROR] root error
+2015-11-29 16:16:19 [INFO] root info
+2015-11-29 16:16:20 [WARN] some text
